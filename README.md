@@ -1,28 +1,18 @@
 # 🚀 API RESTful de Gerenciamento de Usuários
 
-[![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)](https://www.docker.com/)
+![Java 21](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)
+![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen?style=for-the-badge&logo=springboot)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-blue?style=for-the-badge&logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)
 
-API RESTful desenvolvida em **Java 21** e **Spring Boot** para o gerenciamento e cadastro de usuários, utilizando **PostgreSQL** containerizado via **Docker Compose** e persitência de dados com **Spring Data JPA**.
-
----
- 
-## 📌 Sumário
-- [Recursos da Aplicação](#-recursos-da-aplicação)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Arquitetura e Estrutura](#-arquitetura-e-estrutura)
-- [Como Executar o Projeto](#-como-executar-o-projeto)
-- [Endpoints da API](#-endpoints-da-api)
-- [Autor](#-autor)
+API RESTful desenvolvida em **Java 21** e **Spring Boot** para gerenciamento e cadastro de usuários, utilizando **PostgreSQL** rodando via **Docker Compose** e persistência de dados com **Spring Data JPA**.
 
 ---
 
 ## ⚙️ Recursos da Aplicação
 - Cadastro de novos usuários.
 - Listagem completa de usuários cadastrados no banco de dados.
-- Mapeamento de entidade relacional utilizando ORM (Hibernate / Spring Data JPA).
+- Mapeamento de entidade relacional com ORM (Hibernate / Spring Data JPA).
 - Containerização de banco de dados PostgreSQL isolado para ambiente de desenvolvimento.
 
 ---
@@ -38,10 +28,52 @@ API RESTful desenvolvida em **Java 21** e **Spring Boot** para o gerenciamento e
 
 ---
 
-## 📐 Arquitetura e Estrutura
+## 📐 Estrutura do Código
 
-O projeto segue a arquitetura em camadas tradicional do ecossistema Spring:
-src/main/java/com/exemplo/projeto/
-├── controller/     # Camada de exposição dos Endpoints REST
-├── model/          # Entidades que mapeiam as tabelas do banco de dados
-└── repository/     # Interfaces de acesso e comunicação com o banco (JPA)
+    src/main/java/com/exemplo/projeto/
+    ├── controller/     # Rotas e Endpoints REST
+    ├── model/          # Entidades do banco de dados
+    └── repository/     # Comunicação com o banco (JPA)
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- [Git](https://git-scm.com)
+- [JDK 21](https://www.oracle.com/java/technologies/downloads/#java21)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+### Passo a Passo
+
+1. Suba o banco de dados via Docker:
+
+    docker compose up -d
+
+2. Execute a aplicação Spring Boot:
+
+    ./mvnw spring-boot:run
+
+A aplicação estará disponível em http://localhost:8080.
+
+---
+
+## 🔌 Endpoints da API
+
+| Método | Endpoint    | Descrição                     |
+| :---   | :---        | :---                          |
+| GET  | /usuarios | Lista todos os usuários       |
+| POST | /usuarios | Cadastra um novo usuário      |
+
+### Exemplo de JSON para Cadastro (POST /usuarios)
+
+    {
+      "nome": "Desenvolvedor Backend",
+      "email": "dev@email.com"
+    }
+
+---
+
+## 👤 Autor
+
+Desenvolvido por mim como projeto de fixação prática em Engenharia de Software.
