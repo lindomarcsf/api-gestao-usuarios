@@ -41,3 +41,7 @@ API RESTful desenvolvida em **Java 21** e **Spring Boot** para o gerenciamento e
 ## 📐 Arquitetura e Estrutura
 
 O projeto segue a arquitetura em camadas tradicional do ecossistema Spring:
+src/main/java/com/exemplo/projeto/
+├── controller/     # Camada de exposição dos Endpoints REST
+├── model/          # Entidades que mapeiam as tabelas do banco de dados
+└── repository/     # Interfaces de acesso e comunicação com o banco (JPA)
