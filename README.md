@@ -8,7 +8,7 @@
 API RESTful desenvolvida em **Java 21** e **Spring Boot** para o gerenciamento e cadastro de usuários, utilizando **PostgreSQL** containerizado via **Docker Compose** e persitência de dados com **Spring Data JPA**.
 
 ---
-
+ 
 ## 📌 Sumário
 - [Recursos da Aplicação](#-recursos-da-aplicação)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
