@@ -76,4 +76,4 @@ A aplicação estará disponível em http://localhost:8080.
 
 ## 👤 Autor
 
-Desenvolvido por mim como projeto de fixação prática em Engenharia de Software.
+Desenvolvido pelo usuário como projeto autônomo de fixação prática como Desenvolvedor Júnior.
